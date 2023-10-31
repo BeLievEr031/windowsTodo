@@ -86,7 +86,13 @@
             <img src="./icons/more-vertical.svg" alt="theme-switcher-icon" />
           </span>
         </h1>
-        <div class="task-container"></div>
+        <div class="task-container">
+          <div class="task">
+            <div class="circle"></div>
+            <div>TASK ONE</div>
+            <img src="./icons/star.svg" alt="circle-icon" class="important" />
+          </div>
+        </div>
         <div class="task-inp-cont">
           <input
             type="text"
@@ -101,9 +107,26 @@
           <div class="theme-row theme-row-2"></div>
         </div>
       </section>
+      <section class="task-info">
+        <div id="task-info-close-btn">X</div>
+        <div class="step-cont">
+          <div class="curr-task-cont">
+            <div class="circle mark-complete-btn"></div>
+            <div class="curr-task">Task one</div>
+          </div>
+          <div class="curr-task-cont">
+            <div class="circle mark-complete-btn"></div>
+            <div class="curr-task">Task one</div>
+          </div>
+
+          <div class="next-step">+ Next Step</div>
+        </div>
+      </section>
     </div>
 
     <script src="./utils/feather.js"></script>
-    <script src="./_components/sideBar.js"></script>
+    <script src="./scripts/sideBar.js"></script>
+    <script src="./scripts/sheet.js"></script>
+    <script src="./scripts/common.js"></script>
   </body>
 </html>
