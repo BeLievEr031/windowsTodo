@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./style/global.css" />
     <link rel="stylesheet" href="./style/sideBar.css" />
+    <link rel="stylesheet" href="./style/sheet.css" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
@@ -17,30 +18,35 @@
           <input type="text" class="search" />
         </div>
         <div class="data1-box">
-          <div class="data">
+          <div class="data" menu-name="My Day">
             <img src="./icons/sun.svg" alt="sun" />
             <div>My Day</div>
             <div class="count">1</div>
+            <div class="cover"></div>
           </div>
-          <div class="data">
+          <div class="data" menu-name="Important">
             <img src="./icons/star.svg" alt="sun" />
             <div>Important</div>
             <div class="count">1</div>
+            <div class="cover"></div>
           </div>
-          <div class="data">
+          <div class="data" menu-name="Planned">
             <img src="./icons/book.svg" alt="sun" />
             <div>Planned</div>
             <div class="count">1</div>
+            <div class="cover"></div>
           </div>
-          <div class="data">
+          <div class="data" menu-name="Assigned to me">
             <img src="./icons/user.svg" alt="sun" />
             <div>Assigned to me</div>
             <div class="count">1</div>
+            <div class="cover"></div>
           </div>
-          <div class="data">
+          <div class="data activeted-menu active-menu" menu-name="Tasks">
             <img src="./icons/home.svg" alt="sun" />
             <div>Tasks</div>
             <div class="count">1</div>
+            <div class="cover"></div>
           </div>
         </div>
         <hr />
@@ -67,7 +73,34 @@
           </div>
         </div>
       </aside>
-      <section id="section"></section>
+      <section id="section">
+        <h1 id="tab-heading">
+          <img
+            src="./icons/home.svg"
+            alt="home-icon"
+            class="tab-heading-icon"
+          />
+          <span>Tasks</span>
+
+          <span class="theme-switcher-icon">
+            <img src="./icons/more-vertical.svg" alt="theme-switcher-icon" />
+          </span>
+        </h1>
+        <div class="task-container"></div>
+        <div class="task-inp-cont">
+          <input
+            type="text"
+            class="task-inp"
+            placeholder="Add your task here"
+          />
+        </div>
+
+        <div class="theme-cont">
+          <div>Theme</div>
+          <div class="theme-row theme-row-1"></div>
+          <div class="theme-row theme-row-2"></div>
+        </div>
+      </section>
     </div>
 
     <script src="./utils/feather.js"></script>

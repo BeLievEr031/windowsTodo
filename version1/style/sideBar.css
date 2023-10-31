@@ -87,6 +87,23 @@
   padding-right: 15px;
   transition: background-color 0.2s;
   user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin: 2px 0;
+}
+
+.cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.active-menu {
+  background-color: rgb(51, 51, 51);
 }
 
 .data:hover {
@@ -100,11 +117,13 @@
 hr {
   width: 90%;
   background-color: red;
+  margin: 10px 0;
 }
 
 .data2-box {
   color: white;
   height: calc(42px * 8);
+  overflow-y: scroll;
 }
 
 .group {
@@ -130,9 +149,8 @@ hr {
   position: absolute;
   background-color: rgba(28, 28, 28);
   display: none;
-  border: 1px solid gray;
   left: 50%;
-  transform: translate(-50%,-100%);
+  transform: translate(-50%, -100%);
 }
 
 #context-menu > div {
@@ -150,3 +168,4 @@ hr {
 #context-menu > div:hover {
   background-color: rgb(51, 51, 51);
 }
+
