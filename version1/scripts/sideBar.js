@@ -1,7 +1,7 @@
 const logoBox = document.querySelector(".lg-box")
 const search = document.querySelector(".search")
 const contextMenu = document.querySelector("#context-menu")
-
+let isContextDivRendered = false;
 
 const createSideBarData = () => {
     const logoDiv = document.createElement("div")
@@ -39,10 +39,6 @@ addListBtn.addEventListener("click", () => {
     renderContextMenu(rowDiv)
 })
 
-// Hidding the context-menu on click other click
-document.addEventListener("click", () => {
-    contextMenu.style.display = "none";
-})
 
 // Function for creating the new List
 const createNewList = () => {
@@ -101,6 +97,7 @@ const renderContextMenu = (rowDiv) => {
         event.preventDefault();
         contextMenu.style.top = `${rowDiv.getBoundingClientRect().top - 12}px`;
         contextMenu.style.display = 'block';
+        isContextDivRendered = true;
     })
 }
 
@@ -137,25 +134,6 @@ const setHeadingIcon = (headingText) => {
             break;
         default:
             headingIcon.src = "./icons/sun.svg";
-
-    }
-}
-
-
-
-const themes = ["#788CDE", "#BC7ABC", "#E46C8C", "#E46B67", "#4AA079", "#479E98", "#8795A0", "#8BD3CE", "#D6BDE7", "#F5B6C2",]
-const themeRows = document.querySelectorAll(".theme-row")
-
-for (let i = 0; i < themes.length; i++) {
-    const themeColorDiv = document.createElement("div")
-    themeColorDiv.setAttribute("class", "theme-color")
-    themeColorDiv.setAttribute("theme", themes[i])
-    themeColorDiv.style.backgroundColor = themes[i]
-
-    if (i <= 4) {
-        themeRows[0].appendChild(themeColorDiv)
-    } else {
-        themeRows[1].appendChild(themeColorDiv)
 
     }
 }

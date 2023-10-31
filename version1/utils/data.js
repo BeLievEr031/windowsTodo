@@ -10,3 +10,14 @@ const themes = {
     theme9: "#D6BDE7",
     theme10: "#F5B6C2",
 }
+
+
+const task = {
+    title: "",
+    description: "",
+    isImportant: true,
+    isMyday: true,
+    steps: [{ task }],
+    date: new Date.now,
+    isComleted: true
+}
