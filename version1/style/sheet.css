@@ -54,11 +54,13 @@
   color: white;
   position: absolute;
   right: 10px;
+  top: 80px;
   background-color: #212121;
   padding: 10px;
   width: auto;
   pointer-events: none;
   opacity: 0;
+  z-index: 99;
   transform: translateY(-10%);
   transition: all 0.5s;
 }
@@ -97,6 +99,29 @@
   color: white;
   border-radius: 10px;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+.task:hover {
+  background-color: #404044;
+}
+
+.completed-task-drop-down {
+  background-color: #404044;
+  display: flex;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  gap: 8px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+
+.show-completed {
+  display: flex;
 }
 
 .task .important {
@@ -111,6 +136,7 @@
   width: 0%;
   height: 100%;
   color: white;
+  /* background-color: #2A2A2A; */
   background-color: rgb(32, 32, 32);
   transition: all 0.5s;
   display: flex;
@@ -131,7 +157,8 @@
   border-radius: 5px;
 }
 
-.curr-task-cont {
+.curr-task-cont,
+.step-task-cont {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -142,7 +169,8 @@
   cursor: pointer;
 }
 
-.curr-task-cont:hover {
+.curr-task-cont:hover,
+.step-task-cont:hover {
   background-color: #212121;
 }
 
@@ -159,4 +187,33 @@
   margin-left: 5px;
   display: inline-block;
   cursor: pointer;
+}
+
+.add-my-day-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: rgb(55, 55, 55);
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.description {
+  height: 100px;
+  background-color: rgb(55, 55, 55);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.description textarea {
+  width: 100%;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  padding: 10px;
+  resize: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
