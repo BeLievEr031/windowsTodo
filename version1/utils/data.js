@@ -1,4 +1,4 @@
-const themes = {
+const themesArr = {
     theme1: "#788CDE",
     theme2: "#BC7ABC",
     theme3: "#A0CBF1",
@@ -17,7 +17,37 @@ const task = {
     description: "",
     isImportant: true,
     isMyday: true,
-    steps: [{ task }],
-    date: new Date.now,
+    // steps: [{ ...task }],
+    // date: new Date.now,
     isComleted: true
 }
+
+const tasks = [
+    {
+        title: "Task one",
+        description: "Task one description",
+        isImportant: false,
+        isMyday: false,
+        steps: [],
+        // date: new Date.now,
+        isComleted: false
+    },
+    {
+        title: "Task two",
+        description: "Task two description",
+        isImportant: true,
+        isMyday: false,
+        steps: [],
+        // date: new Date.now,
+        isComleted: false
+    },
+    {
+        title: "Task three",
+        description: "Task three description",
+        isImportant: false,
+        isMyday: true,
+        steps: [],
+        // date: new Date.now,
+        isComleted: true
+    },
+]
