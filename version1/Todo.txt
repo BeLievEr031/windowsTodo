@@ -1,1 +1,5 @@
 [+] Event Delegation
+[+] Actual tasks loses its hover effect after certain clicks.
+[+] Create a function for the initial data load.
+                |--> Completed Task Management
+                |--> DB Management
